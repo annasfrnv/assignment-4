@@ -9,24 +9,24 @@ h2 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.413em;
 	font-weight: 700;
-	text-transform: uppercase;
 	letter-spacing: 3.5px;
+	text-transform: uppercase;	
 }
 
 h3 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 20px;
 	font-weight: 300;
-	text-transform: uppercase;
 	letter-spacing: 3.5px;
+	text-transform: uppercase;	
 }
 
 h4 {
 	font-family: 'Source Sans Pro', sans-serif;
-	color: #dfe61e;
 	font-weight: 400;
 	font-size: 98%;
 	white-space: nowrap;
+	color: #dfe61e;
 }
 
 html,
@@ -35,16 +35,18 @@ body {
 	height: 100%;
 }
 
+/* menu layout */
+
 header {
 	position: fixed;
-	padding-top: 4%;
+	z-index: 1000;
+	display: block;
 	width: 20%;
 	min-width: 250px;
 	height: 100vh;
-	background-color: #010101; 
-	display: block;
-	border-top: 1.25em solid #dfe61e;
-	z-index: 1000;
+	padding-top: 4%;	
+	background-color: #010101; 	
+	border-top: 1.25em solid #dfe61e;	
 }
 
 nav {
@@ -54,12 +56,12 @@ nav {
 
 #menubtn {
 	display: none;
+	float: left;
+	margin: 2% 0 0 5%;
 	width: 33px;
 	height: 19px;
 	background: url("../img/menu@2x.png") no-repeat;
-	background-size: 80%;
-	float: left;
-	margin: 2% 0 0 5%;
+	background-size: 80%;	
 }
 
 #logo {
@@ -71,61 +73,63 @@ nav {
 }
 
 ul#menu {
-	padding-top: 20%;
+	height: 80%;
 }
 
 ul#menu li {
-	list-style: none;
 	padding-top: 5%;
+	list-style: none;	
 }
 
-ul#menu li a {
+ul#menu li a {	
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 28px;
 	letter-spacing: 5px;
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;
-	font-size: 28px;
 }
 
 footer {	
 	margin: 0 10%;
+	font-size: 0.9em;
 }
+
+/* homepage */
 
 section#main {
 	position: absolute;
 	padding-left: 20%;
 	height: 100%;
 	width: 100%;
-
+	border-top: 1.25em solid #dfe61e;
 }
 
 ul.content {
+	float: left;
 	margin: 0;
 	padding: 0;
-	float: left;
+	margin-left: -0.25em;	
 	width: auto;
-	white-space:nowrap; 
-	border-top: 1.25em solid #dfe61e;
-	overflow-y: hidden;
 	height: 100%;
-	margin-left: -0.25em;
+	white-space:nowrap; 
+	overflow-y: hidden;	
 }
 
 ul.content li {
-	display: inline-block;
 	position: relative;
+	display: inline-block;	
 	margin-left: -0.25em;
 }
 
 .overlay {
+	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0, 0.4);
-	background-size: 100px 100px;
-	position: absolute;
-	top: 0;
+	background-size: 100px 100px;	
 	-webkit-transition: all 500ms ease-in;
 	-moz-transition: all 500ms ease-in;
 	-ms-transition: all 500ms ease-in;
@@ -147,9 +151,9 @@ ul.content li {
 
 .overlay:hover,
 ul.content li a:hover > .overlay {
-	background-color: rgba(223,230,30,0.4);
-	height: 180px;
 	top: 50%;
+	height: 180px;
+	background-color: rgba(223,230,30,0.4);	
 }
 
 .overlay:hover > .overlay h2,
@@ -159,35 +163,74 @@ ul.content li a:hover > .overlay h3 {
 	opacity: 1;
 } 
 
-/* Gallery */
-.album{
-	width: 95%;
+/* about page */
+
+section#about {	
+	width: 100%;
+	padding: 3% 0 3% 0;
+}
+
+section#about:before {
+	content: "";
+	display: inline-block;
+	width: 24vw;
+	min-width: 280px;
+	height: 100vh;
+}
+section#about .container {
+	display: inline-block;
+	width: 65%;
+}
+section#about img {
+	float: left;
+	width: 20%;
+	margin-right: 2%;
+}
+
+p {
+	float: left;
+	width: 100%;	
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 1.3em;
+	line-height: 30px;
+}
+
+p.cursive {
+	float: left;
+	width: 75%;	
+	font-style: italic;
+}
+
+/* gallery page */
+
+.album {
 	padding: 1em 5% 0 5%;
 }
 
-.scroll_cont{
-	height: 200px;
+.scroll_cont {
 	width: 100%;
-	overflow: hidden;
+	height: 200px;
+	border-top: 2px solid #dfe61e;	
+	overflow: hidden;	
 }
 
-.album h3{
+.album h3 {
 	font-weight: bold;
 }
 
-ul.artworks{
-	border-top: 2px solid #dfe61e;
-	margin: 0;
-	padding: 0;
+ul.artworks {
 	float: left;
 	width: auto;
-	white-space:nowrap; 
-	padding-top: 20px;
+	height: 193px;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;	
+	white-space:nowrap; 	
 }
 
-ul.artworks li{
-	display: inline-block;
+ul.artworks li {
 	position: relative;
+	display: inline-block;	
 }
 
 ul.artworks li a img {
@@ -201,47 +244,23 @@ ul.artworks li a img {
 	transition: all 500ms ease-in;
 }
 
-ul.artworks li img:hover{ 
+ul.artworks li img:hover { 
 	opacity: 1;
 }
 
-/*============= ABOUT PAGE =================*/
-
-section#about {
-	float: left;
-	width: 80%;
-	padding: 3% 0 3% 23%;
-}
-
-section#about img {
-	float: left;
-	width: 20%;
-	margin-right: 2%;
-}
-
-p {
-	width: 100%;
-	float: left;
-	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 1.3em;
-	line-height: 30px;
-}
-
-p.cursive {
-	width: 75%;
-	float: left;
-	font-style: italic;
-}
 
 /*================ MEDIA QUERIES =======================*/
 
+
 @media screen and (min-width: 320px) and (max-width: 900px) {
-	
+
+	/* menu layout */
+
 	header {
-	width: 100%;
-	height: 12%;
-	border-top: 0.5em solid #dfe61e;
-	min-height: 85px;
+		width: 100%;
+		height: 12%;
+		min-height: 85px;
+		border-top: 0.5em solid #dfe61e;
 	}
 
 	nav {
@@ -253,53 +272,67 @@ p.cursive {
 	#menubtn {
 		display: block;
 		cursor: pointer;
-
 	}
 
 	#logo {
-		float: none;
 		display: block;
+		float: none;		
 		height: 100%;
 		background: url("../img/logo.png") no-repeat;
 		background-size: 60%;
 		background-position: 99% 28%;
 	}
 
-	ul#menu {
+	nav {
 		position: fixed;
-		background-color: #000;
+		left: -50%;
+		width: 50%;		
 		height: 100%;
 		margin: 0;
-		padding: 5%;
-		left: -50%;
-		width: 50%;
-
+		padding: 5% 1%;
+		background-color: #000;		
 	}
 
-	ul#menu li {
-		list-style: none;
+	nav li {
 		padding-top: 5%;
+		list-style: none;		
 	}
 
-	ul#menu li a {
+	nav li a {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		font-size: 28px;
 		letter-spacing: 5px;
 		color: #fff;
 		text-transform: uppercase;
 		text-decoration: none;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 300;
-		font-size: 28px;
 	}
 
-	footer {	
-		display: none;
+	footer {
+		margin-left: 0;
+		font-size: 0.8em;
 	}
+
+	footer h4 {
+		padding-left: 1%;
+		white-space: normal;		
+	}
+
+	/* homepage */
 
 	section#main {
-	float: left;
-	padding-left: 0;
-	height: 100%;
-	width: 100%;
+		float: left;
+		width: 100%;
+		height: 100%;
+		padding-left: 0;		
+		border: none;
+	}
+
+	section#main:before {
+	    content: "";
+	    display: block;
+	    height: 11vh;
+	    min-height: 85px;
 	}
 
 	ul.content {
@@ -318,43 +351,64 @@ p.cursive {
 	.overlay,
 	.overlay:hover,
 	ul.content li a:hover > .overlay {
-		background-color: rgba(223,230,30,0.4);
-		height: 20%;
 		top: 70%;
+		height: 20%;
+		background-color: rgba(223,230,30,0.4);
 		transition: none;
 	}
 
 	.overlay h2, 
-	.overlay h3 {
-		-webkit-text-size-adjust: 50%;
+	.overlay h3 {		
 		font-size: 17px;
-		opacity: 1;
-		transition: none;
 		letter-spacing: 0;
+		opacity: 1;
+		-webkit-text-size-adjust: 50%;
+		transition: none;		
+	}
+
+	ul#menu {
+		height: 60%;
+		padding-left: 10%;
 	}
 
 	ul#menu li a {
-		-webkit-text-size-adjust: 70%;
 		font-size: 20px;
-	}
-
-	ul#menu li {
-		padding-top: 20%;
+		-webkit-text-size-adjust: 70%;		
 	}
 
 	/*about page*/
 
 	section#about {
-		float: left;
 		width: 97%;
-		padding: 3%;
+		padding: 5%;
+		padding-top: 30%;
 	}
 
+	section#about .container {
+		display: inline-block;
+		width: 100%;
+	}
 
-	
+	section#about:before {
+		display: none;
+	}
 
+	section#about img {
+		width: 50%;
+		margin: 5% 25%;
+	}
+
+	p.cursive {
+		width: 100%;
+	}
+
+	p {
+		font-size: 0.9em;
+	}	
 	
 }
+
+/* only tablet */
 
 @media screen and (min-width: 480px) and (max-width: 900px) { 
 
@@ -363,14 +417,55 @@ p.cursive {
 	}
 
 	#logo {
-		background-size: 30%;
 		background-position: 99% 28%;
+		background-size: 30%;		
 	}
 
+	/*about page*/
+
+	section#about {
+		width: 97%;
+		padding-top: 0;
+	}
+
+	section#about .container{
+		display: inline-block;
+		width: 100%;
+	}
+
+	section#about:before {
+	    content: "";
+	    display: block;
+	    height: 15vh;
+	    min-height: 85px;
+	}
+
+	section#about img {
+		width: 30%;
+		margin: 0 35%;
+	}
 	
-
-
 } 
+
+/* override swipebox */
+
+#swipebox-overlay {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9) !important;
+}
+
+#swipebox-caption,
+#swipebox-action {
+	background-image: none !important;	
+}
+
+#swipebox-caption {
+	 border-bottom: 1px solid #DFE61E !important;
+}
+
+#swipebox-action {
+	border-top: 1px solid #DFE61E !important;
+}
+
 
 
 

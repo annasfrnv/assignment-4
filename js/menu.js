@@ -1,14 +1,14 @@
 $(function() {
 	$("#menubtn").click(function(){
 		if($(this).hasClass('open')){
-			$("ul#menu").animate({
+			$("nav").animate({
 	        	left: "-50%"
 	        }, 500);     
 	        $('section').animate({
 	            marginLeft: "0"
 	        }, 500);
 		} else {
-			$("ul#menu").animate({
+			$("nav").animate({
 	        	left: "0"
 	        }, 500);
 	        $('section').animate({
@@ -16,5 +16,11 @@ $(function() {
 	        }, 500);
 		}
 		$(this).toggleClass('open');
+	});
+
+	$( window ).resize(function() {
+		if($('#menubtn').hasClass('open')){
+			$('#menubtn').trigger('click');
+		}
 	});
 });
