@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Darren Bryant | Artist & Filmmaker</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<nav>
+			<div id="menubtn"></div>
+			<div id="logo"></div>
+			<ul id="menu">
+				<li><a href="index.html">home</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="gallery.html">gallery+</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<h4>email: darrenbryant79@gmail.com</h4>
+			<h4>phone: +123456789</h4>
+		</footer>
+	</header>
+
+	<section id="main">
+		<ul class="content">
+			<li>
+				<a href="gallery.html">
+					<img src="img/cover1.jpg">
+					<div class="overlay">
+						<h2>woman in yellow</h2>
+						<h3>02.08.2013</p>
+					</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover2.jpg">
+				<div class="overlay">
+					<h2>st petersburg</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover3.jpg">
+				<div class="overlay">
+					<h2>downtown</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover4.jpg">
+				<div class="overlay">
+					<h2>Moosey Moose</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover1.jpg">
+				<div class="overlay">
+					<h2>woman in yellow</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover2.jpg">
+				<div class="overlay">
+					<h2>st petersburg</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover3.jpg">
+				<div class="overlay">
+					<h2>downtown</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover4.jpg">
+				<div class="overlay">
+					<h2>Moosey Moose</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover1.jpg">
+				<div class="overlay">
+					<h2>woman in yellow</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover2.jpg">
+				<div class="overlay">
+					<h2>st petersburg</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover3.jpg">
+				<div class="overlay">
+					<h2>downtown</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+			<li>
+				<a href="gallery.html">
+				<img src="img/cover4.jpg">
+				<div class="overlay">
+					<h2>Moosey Moose</h2>
+					<h3>02.08.2013</p>
+				</div>
+				</a>	
+			</li>
+
+		</ul>
+	</section>
+
+	
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type='text/javascript' src='js/jquery.mousewheel.js'></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("body").mousewheel(function(e, delta) { 
+				$('body').stop().animate({scrollLeft: '-='+(10*delta)+'px' }, 200);
+					e.preventDefault();
+			});
+		});
+	</script>
+
+</body>
+</html>
